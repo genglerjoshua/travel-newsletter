@@ -9,18 +9,26 @@
   <style type="text/css">
 
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-    
+
+    * {
+        box-sizing: border-box;
+    }
     body {
         margin: 0;
     }
     table {
         border-spacing: 0;
+        width: 100%;
     }
     td {
         padding: 0;
     }
-    img {
-        border: none;
+    .img {
+        width: 350px;
+        border-radius: 10px;
+    }
+    p {
+        margin: 0;
     }
     .wrapper {
         width: 100%;
@@ -32,43 +40,226 @@
         font-family: "Roboto", sans-serif;
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.3)
     }
+    .header {
+        display: flex; 
+        justify-content: center; 
+        padding: 0 20px;
+        height: 128px; 
+        background-color: #81f1f1;
+    }
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        background-color: white; 
+        width: 210px; 
+        height: 30px; 
+        margin-top: 36px;
+        border-style: solid;
+        border-width: 1px;
+    }
+    .menu {
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        width: 360px;  
+        margin-top: 23px;
+    }
+    .pack-row {
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    .pack-table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pack-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pack-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+    .pack-price {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+    .pack-person {
+        font-size: 8px;
+        margin-top: 0px;
+    }
+    .pack-include {
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+    .pack-incl-txt {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 28px;
+        width: 90px;
+        background-color: white;
+        border-radius: 5px;
+        font-size: 15px;
+        margin-top: 15px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    .footer {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 50px;
+    }
+    .icon {
+        width: 20px;
+        margin: 0 15px;
+    }
 
     </style>
 
 </head>
 <body>
-    <center class="wrapper">
-        <table class="main">
+    <center class="wrapper main">
+        <table class="header">
 
-    <!-- navbar table -->
+        <!-- navbar table -->
     
         <!-- title -->
-            <tr>
-                <td>
-                    <p style="display: flex; justify-content: center;">WILD TRAVELER</p>
+            <tr style="display:flex; justify-content: center;">
+                <td >
+                    <p class="title">Wild Traveler</p>
                 </td>
             </tr>
         <!-- nav links -->
             <tr>
-                <td style="display: flex; justify-content: space-between; padding:10px;">
+                <td class="menu">
                     <a>Countries</a>
                     <a>Hotels</a>
-                    <a>HOT! Tours</a>
+                    <a><span style="color:red;">HOT!</span> Deals</a>
                 </td>
             </tr>
+        </table>
 
     <!-- main table -->
+    <table style="padding: 0 20px;">
 
-        <!-- category / contact -->
         <!-- package1 -->
+        <tr>
+            <td style="background-color: #2dffb3;" class="pack-row">
+                <img class="img" src="/images/travel_4.png" alt="package1">
+                <table class="pack-table">
+                    <tr>
+                        <td class="pack-text">
+                            <p class="pack-title">Panama</p>
+                            <p class="pack-price">Just $2000</p>
+                            <p class="pack-person">per person</p>
+                            <p class="pack-include">Included:</p>
+                            <p class="pack-incl-txt">Transportation</p>
+                            <p class="pack-incl-txt">Hotel</p>
+                            <p class="pack-incl-txt">Meals</p>
+                            <p class="button">Book Now</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
         <!-- package2 -->
+        <tr>
+            <td style="flex-direction: row-reverse; background-color: #fdff8c;" class="pack-row">
+                <img class="img" src="/images/travel_2.png" alt="package2">
+                <table class="pack-table">
+                    <tr>
+                        <td class="pack-text">
+                            <p class="pack-title">Australia</p>
+                            <p class="pack-price">Just $2000</p>
+                            <p class="pack-person">per person</p>
+                            <p class="pack-include">Included:</p>
+                            <p class="pack-incl-txt">Transportation</p>
+                            <p class="pack-incl-txt">Hotel</p>
+                            <p class="pack-incl-txt">Meals</p>
+                            <p class="button">Book Now</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
         <!-- package3 -->
-        <!-- package4 -->       
+        <tr>
+            <td style="background-color: #bad1ff;" class="pack-row">
+                <img class="img" src="/images/travel_1.png" alt="package3">
+                <table class="pack-table">
+                    <tr>
+                        <td class="pack-text">
+                            <p class="pack-title">Thailand</p>
+                            <p class="pack-price">Just $2000</p>
+                            <p class="pack-person">per person</p>
+                            <p class="pack-include">Included:</p>
+                            <p class="pack-incl-txt">Transportation</p>
+                            <p class="pack-incl-txt">Hotel</p>
+                            <p class="pack-incl-txt">Meals</p>
+                            <p class="button">Book Now</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- package4 -->  
+        <tr>
+            <td style="flex-direction: row-reverse; background-color: #e5eaff;" class="pack-row">
+                <img class="img" src="/images/travel_3.png" alt="package4">
+                <table class="pack-table">
+                    <tr>
+                        <td class="pack-text">
+                            <p class="pack-title">Antarctic</p>
+                            <p class="pack-price">Just $2000</p>
+                            <p class="pack-person">per person</p>
+                            <p class="pack-include">Included:</p>
+                            <p class="pack-incl-txt">Transportation</p>
+                            <p class="pack-incl-txt">Hotel</p>
+                            <p class="pack-incl-txt">Meals</p>
+                            <p class="button">Book Now</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>     
+    </table>
 
     <!-- footer table-->
-        <!-- website and contact -->
-        <!-- social media links -->
-        </table>
+
+    <table class="footer">
+        <tr>
+            <td>
+                <p>Corporation</p>
+                <p style="margin-top: 5px;">You are receiving this email because you opted in via our website</p>
+                <p style="margin-top: 15px;">
+                    <img src="/images/logos--twitter.svg" alt="logo" class="icon">
+                    <img src="/images/logos--instagram-icon.svg" alt="logo" class="icon">
+                    <img src="/images/fa6-brands--youtube.svg" alt="logo" class="icon">
+                    <img src="/images/fa6-brands--dribbble.svg" alt="logo" class="icon">
+                    <img src="/images/mdi--linkedin.svg" alt="logo" class="icon">
+                </p>
+                <p style="margin-top: 20px;">Address, #PC</p>
+                <p>City, State.</p>
+                <p style="margin-top: 10px;"><a href="#">Unsubscribe</a></p>
+                <p style="font-size:26px; font-weight: 700; margin-top: 15px;">LOGO</p>
+            </td>
+        </tr>
+    </table>
     </center>
 </body>
 </html>
